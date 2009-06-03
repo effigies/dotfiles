@@ -1,0 +1,136 @@
+OnDesktop Mouse1 :HideMenus
+OnDesktop Mouse2 :WorkspaceMenu
+OnDesktop Mouse3 :RootMenu
+OnDesktop Mouse4 :NextWorkspace
+OnDesktop Mouse5 :PrevWorkspace
+
+Mod1 Tab :NextWindow
+Mod1 Shift Tab :PrevWindow
+Mod1 F1 :Workspace 1
+Mod1 F2 :Workspace 2
+Mod1 F3 :Workspace 3
+Mod1 F4 :Workspace 4
+Mod1 F5 :Workspace 5
+Mod1 F6 :Workspace 6
+Mod1 F7 :Workspace 7
+Mod1 F8 :Workspace 8
+Mod1 F9 :Workspace 9
+Mod1 F10 :Workspace 10
+Mod1 F11 :Workspace 11
+Mod1 F12 :Workspace 12
+
+Control F1	:SendToWorkspace 1
+Control F2	:SendToWorkspace 2
+Control F3	:SendToWorkspace 3
+Control F4	:SendToWorkspace 4
+Control F5	:SendToWorkspace 5
+Control F6	:SendToWorkspace 6
+Control F7	:SendToWorkspace 7
+Control F8	:SendToWorkspace 8
+Control F9	:SendToWorkspace 9
+Control F10	:SendToWorkspace 10
+Control F11	:SendToWorkspace 11
+Control F12	:SendToWorkspace 12
+
+#Mod1 Q		:Exec 
+#Mod1 W		:Exec 
+#Mod1 E		:Exec 
+Mod1 R		:Exec urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=15" -fg "#ffffff" -bg "#404040" -tr +sb -ls -sl 32768
+#Mod1 T		:Exec 
+#Mod1 Y		:Exec 
+#Mod1 U		:Exec 
+#Mod1 I		:Exec 
+#Mod1 O		:Exec 
+#Mod1 P		:Exec 
+
+Mod1 A		:Exec pidgin
+Mod1 S		:Exec amarok
+#Mod1 D		:Exec 
+Mod1 F		:Exec firefox
+#Mod1 G		:Exec 
+#Mod1 H		:Exec 
+#Mod1 J		:Exec 
+#Mod1 K		:Exec 
+#Mod1 L		:Exec 
+#Mod1 semicolon	:Exec 
+
+#Mod1 Z		:Exec 
+#Mod1 X		:Exec 
+#Mod1 C		:Exec 
+#Mod1 V		:Exec 
+#Mod1 B		:Exec 
+#Mod1 N		:Exec 
+#Mod1 M		:Exec 
+
+#Mod4 Q		:Exec 
+#Mod4 W		:Exec 
+#Mod4 E		:Exec 
+Mod4 R		:reconfigure
+#Mod4 T		:Exec 
+#Mod4 Y		:Exec 
+#Mod4 U		:Exec 
+#Mod4 I		:Exec 
+#Mod4 O		:Exec ### Amarok Show OSD ###
+#Mod4 P		:Exec ### Amarok Toggle Playlist Window ###
+
+#Mod4 A		:Exec ### Amarok Add Media ###
+#Mod4 S		:Exec 
+#Mod4 D		:Exec 
+#Mod4 F		:Exec 
+#Mod4 G		:Exec 
+#Mod4 H		:Exec 
+#Mod4 J		:Exec 
+#Mod4 K		:Exec 
+Mod4 L		:Exec xscreensaver-command -lock || xscreensaver & sleep 1 && xscreensaver-command -lock
+
+#Mod4 Z		:Exec ### Amarok Previous Track ###
+#Mod4 X		:Exec ### Amarok Play ###
+#Mod4 C		:Exec ### Amarok Play/Pause ###
+#Mod4 V		:Exec ### Amarok Stop ###
+#Mod4 B		:Exec ### Amarok Next Track ###
+#Mod4 N		:Exec 
+#Mod4 M		:Exec 
+
+#Control Q	:Exec 
+#Control W	:Exec 
+#Control E	:Exec 
+#Control R	:Exec 
+#Control T	:Exec 
+#Control Y	:Exec 
+#Control U	:Exec 
+#Control I	:Exec 
+#Control O	:Exec 
+#Control P	:Exec 
+
+#Control A	:Exec 
+#Control S	:Exec 
+#Control D	:Exec 
+#Control F	:Exec 
+#Control G	:Exec 
+#Control H	:Exec 
+#Control J	:Exec 
+#Control K	:Exec 
+#Control L	:Exec 
+
+#Control Z	:Exec 
+#Control X	:Exec 
+#Control C	:Exec 
+#Control V	:Exec 
+#Control B	:Exec 
+#Control N	:Exec 
+#Control M	:Exec 
+
+# Modify size/decoration of window
+Mod4 Up		:ToggleDecor
+Mod4 Down	:MaximizeVertical
+Mod4 Right	:MaximizeHorizontal
+Mod4 Left	:Maximize
+
+Mod4 Escape	:Restart
+
+# System volume controls
+XF86AudioMute			:Exec amixer -q set Master toggle
+XF86AudioRaiseVolume		:Exec amixer -q set Master 2+
+XF86AudioLowerVolume		:Exec amixer -q set Master 2-
+Mod1 XF86AudioRaiseVolume	:Exec amixer -q set PCM 2+
+Mod1 XF86AudioLowerVolume	:Exec amixer -q set PCM 2-

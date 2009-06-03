@@ -1,0 +1,13 @@
+[app] (name=firefox)
+  [Deco]	{NONE}
+[end]
+[app] (name=Navigator) (class=Firefox) (role=browser)
+  [Dimensions]	{1680 1050}
+  [Position]	(UPPERLEFT)	{0 0}
+  [Deco]	{NONE}
+[end]
+[app] (name=.*rxvt.*)
+  [Deco]	{NONE}
+[end]
+[app] (name=amarokapp)
+[end]

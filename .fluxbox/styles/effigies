@@ -1,0 +1,102 @@
+! Title:	effigies
+! By:		Chris Johnson
+! Email:	effigies@gmail.com
+
+! ***** toolbar *****
+toolbar:				flat
+     toolbar.color:			#404040
+
+toolbar.label:				parentrelative
+     toolbar.label.textColor:		#cccccc
+
+toolbar.windowLabel:            	parentrelative
+     toolbar.windowLabel.textColor:	#cccccc
+
+toolbar.clock:				parentrelative
+     toolbar.clock.textColor:		#cccccc
+
+toolbar.button:				parentrelative
+     toolbar.button.picColor:		#cccccc
+
+toolbar.button.pressed:			parentrelative
+
+toolbar.workspace:			parentrelative
+     toolbar.workspace.borderWidth:	0
+
+! ***** menu *****
+menu.title:				flat
+     menu.title.color:			#404040
+     menu.title.textColor:		#ffffff
+
+menu.frame:				flat
+     menu.frame.color:			#404040
+     menu.frame.textColor:		#cccccc
+
+menu.hilite:				flat
+     menu.hilite.color:			#404040
+     menu.hilite.textColor:		#ffffff
+
+menu.bullet:				none
+
+
+! ***** window focused *****
+window.title.focus:			raised
+     window.title.focus.color:		#404040
+
+window.label.focus:			parentrelative
+     window.label.focus.color:		#404040
+     window.label.focus.textColor:	#cccccc
+
+window.button.focus:			parentrelative
+     window.button.focus.picColor:	#cccccc
+
+window.button.pressed:			parentrelative
+     window.button.pressed.color:	#606060
+
+window.handle.focus:			raised
+     window.handle.focus.color:		#505050
+
+window.grip.focus:			raised
+     window.grip.focus.color:		#606060
+
+window.frame.focusColor:		#858585
+window.frame.focus.color:		#858585
+
+
+! ***** window unfocused *****
+window.title.unfocus:			raised
+     window.title.unfocus.color:	#505050
+
+window.label.unfocus:			parentrelative
+     window.label.unfocus.textColor:	#808080
+
+window.button.unfocus:			parentrelative
+     window.button.unfocus.picColor:	#727272
+
+window.handle.unfocus:			raised
+     window.handle.unfocus.color:	gray50
+
+window.grip.unfocus:			raised
+     window.grip.unfocus.color:		gray50
+
+window.frame.unfocusColor:		#5e6166
+window.frame.unfocus.color:		#5e6166
+
+
+! ***** fonts *****
+*.font:					-*-lucida-medium-r-*-*-*-100-*-*-*-*-*
+    toolbar.justify:			center
+    window.justify:			left
+    menu.title.justify:			center
+    menu.frame.justify:			right
+
+! ***** the rest *****
+borderColor:				#202020
+borderWidth:				0
+bevelWidth:				0
+handleWidth:				0
+frameWidth:				0
+
+background:				flat
+background.color:			#404040
+rootCommand:				fbsetroot -solid gray25
