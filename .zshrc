@@ -36,7 +36,7 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
 [[ -n ${key[Delete]} ]] && bindkey "${key[Delete]}" delete-char
 [[ -n ${key[End]} ]] && bindkey "${key[End]}" end-of-line
 [[ -n ${key[PageDown]} ]] && bindkey "${key[PageDown]}" end-of-history
-[[ -n ${key[Up]} ]] && bindkey "${key[Up]}" up-line-or-search
+#[[ -n ${key[Up]} ]] && bindkey "${key[Up]}" up-line-or-search
 [[ -n ${key[Left]} ]] && bindkey "${key[Left]}" backward-char
-[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
+#[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
