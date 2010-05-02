@@ -1,5 +1,15 @@
 # Prompt: user@host.tty:~/current/path%
-prompt="%n@%m.%y:%~%# "
+    autoload colors zsh/terminfo
+    if [[ "$terminfo[colors]" -ge 8 ]]; then
+   colors
+    fi
+    for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+   eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
+   eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
+   (( count = $count + 1 ))
+    done
+    PR_NC="%{$terminfo[sgr0]%}"
+prompt="$PR_GREEN%n@%m$PR_NC.$PR_BLUE%y$PR_NC:$PR_WHITE%~$PR_NC%# "
 
 #
 # History options
