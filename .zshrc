@@ -29,7 +29,7 @@ setopt PUSHD_SILENT		# Don't display directory stack
 
 #ulimit -u 1024
 
-export PATH="/home/chris/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+export PATH="/home/chris/bin:$PATH"
 
 # Import aliases
 . ~/.alias
@@ -50,3 +50,11 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
 [[ -n ${key[Left]} ]] && bindkey "${key[Left]}" backward-char
 #[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
+
+pushd ~/gitosis-admin
+git pull
+popd
+
+TRAPUSR1() {
+	fc -IW ~/.zsh_histories/`date +%Y.%m.%d.%H.%M.%s`
+}
