@@ -29,7 +29,7 @@ setopt PUSHD_SILENT		# Don't display directory stack
 
 #ulimit -u 1024
 
-export PATH="/home/chris/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
+export PATH="$HOME/.cabal/bin:$PATH"
 
 # Import aliases
 . ~/.alias
