@@ -31,7 +31,7 @@ alias lsl='ls -l'
 alias lss='ls -s'
 
 # git shorthand
-alias git-fix='git-status | grep deleted | sed -e "s/^#\tdeleted: *//" | xargs -d "\n" git-rm;'
+alias git-fix='git status | grep deleted | sed -e "s/^#\tdeleted: *//" | xargs -d "\n" git rm;'
 
 alias v='vim'
 alias vi='vim'
@@ -64,7 +64,7 @@ alias office='ooffice'
 # 
 # Also handy:
 # sleep 60m; pause
-alias pause='dcop --user chris amarok player playPause'
+alias pause='amarok -t'
 alias play='dcop --user chris amarok player play'
 alias next='dcop --user chris amarok player next'
 alias prev='dcop --user chris amarok player prev'
