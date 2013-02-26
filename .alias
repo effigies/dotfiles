@@ -70,3 +70,7 @@ alias next='dcop --user chris amarok player next'
 alias prev='dcop --user chris amarok player prev'
 
 alias psed='perl -p'
+
+alias android-connect="mtpfs -o allow_other /media/nexus"
+alias android-disconnect="fusermount -u /media/nexus"
+
