@@ -29,7 +29,7 @@ setopt PUSHD_SILENT		# Don't display directory stack
 
 #ulimit -u 1024
 
-export PATH="$HOME/.cabal/bin:$PATH:/data/MATLAB/R2012a/bin"
+export PATH="$HOME/.bin:$HOME/.cabal/bin:$PATH:/data/MATLAB/R2012a/bin"
 
 # Import aliases
 . ~/.alias
