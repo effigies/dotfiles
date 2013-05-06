@@ -17,6 +17,9 @@ alias dusch='du -sch'
 alias dfh='df -h'
 alias mkdirp='mkdir -p'
 
+# Move ^V clipboard to middle-click clipboard
+alias ptm='xclip -selection c -o | xclip'
+
 # modify default behaviors
 alias ls='ls --group-directories-first'
 
