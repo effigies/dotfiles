@@ -1,0 +1,30 @@
+Config { font = "xft:Inconsolata-10:bold,Terminus-10:bold"
+       , bgColor = "grey10"
+       , fgColor = "grey75"
+       , position = TopW L 94
+       , lowerOnStart = True
+       , commands = [ Run Weather "KBOS" [
+                        "-t", "<tempC>C",
+                        "-L", "15", "-H", "20",
+                        "--normal", "green",
+                        "--high", "red",
+                        "--low","lightblue"] 6000
+                    , Run MultiCpu [
+                        "-t",
+                        "CPU: (<total0>%,<total1>%,<total2>%,<total3>%)",
+                        "-L", "3", "-H", "50",
+                        "--normal", "green", "--high", "red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Battery [
+                        "-t", "<acstatus> <timeleft>",
+                        "-L", "10", "-H", "80", "--",
+                        "-O", "<fc=green>AC</fc>",
+                        "-o", "<fc=red>BAT</fc>" ] 100
+                    , Run Swap [] 20
+                    , Run Date "%a %_d %b %k:%M" "date" 5
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %multicpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %battery% | %KBOS% "
+       }
