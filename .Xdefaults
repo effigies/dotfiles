@@ -1,0 +1,5 @@
+URxvt.font: xft:Inconsolata,xft:Terminus
+URxvt.scrollBar: False
+URxvt.transparent: True
+URxvt.tintColor: Grey25
+URxvt.foreground: Grey75
