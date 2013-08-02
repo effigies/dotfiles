@@ -15,8 +15,8 @@ prompt="$PR_GREEN%n@%m$PR_NC.$PR_BLUE%y$PR_NC:$PR_WHITE%~$PR_NC%# "
 # History options
 #
 export HISTFILE=~/.zsh_hist	# History file
-export SAVEHIST=1000		# Lines to save
-export HISTSIZE=1000		# Again
+export SAVEHIST=100000		# Lines to save
+export HISTSIZE=100000		# Again
 setopt HIST_IGNORE_ALL_DUPS
 
 #
@@ -29,7 +29,8 @@ setopt PUSHD_SILENT		# Don't display directory stack
 
 #ulimit -u 1024
 
-export PATH="$HOME/.bin:$HOME/.cabal/bin:$PATH:/data/MATLAB/R2012a/bin"
+export PATH="/usr/local/freesurfer/bin:/usr/lib/fsl/5.0:$HOME/.bin:$HOME/.cabal/bin:$PATH"
+export PYTHONPATH=/data/obart/django:/home/effigies/Projects/qnl/mvpa
 
 # Import aliases
 . ~/.alias
@@ -46,14 +47,10 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
 [[ -n ${key[Delete]} ]] && bindkey "${key[Delete]}" delete-char
 [[ -n ${key[End]} ]] && bindkey "${key[End]}" end-of-line
 [[ -n ${key[PageDown]} ]] && bindkey "${key[PageDown]}" end-of-history
-#[[ -n ${key[Up]} ]] && bindkey "${key[Up]}" up-line-or-search
+[[ -n ${key[Up]} ]] && bindkey "${key[Up]}" up-line-or-search
 [[ -n ${key[Left]} ]] && bindkey "${key[Left]}" backward-char
-#[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
+[[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
-
-#pushd ~/gitosis-admin
-#git pull
-#popd
 
 TRAPUSR1() {
 	fc -IW ~/.zsh_histories/`date +%Y.%m.%d.%H.%M.%s`
