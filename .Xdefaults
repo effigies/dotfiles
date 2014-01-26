@@ -3,5 +3,6 @@ URxvt.scrollBar: False
 URxvt.transparent: True
 URxvt.tintColor: Grey25
 URxvt.foreground: Grey75
-URxvt.perl-ext-common: newterm
+URxvt.perl-ext-common: fullscreen,newterm
+URxvt.keysym.F11: perl:fullscreen:switch
 URxvt.keysym.C-S-N: perl:newterm

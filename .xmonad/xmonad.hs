@@ -1,32 +1,25 @@
 import XMonad
-import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.ManageDocks
-import XMonad.Hooks.SetWMName
-import XMonad.Util.Run (spawnPipe)
+import XMonad.Hooks.ManageHelpers (isFullscreen,doFullFloat)
+import XMonad.Layout.Fullscreen (fullscreenManageHook, fullscreenEventHook, fullscreenFull)
 import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Layout.NoBorders (smartBorders)
-import XMonad.Config.Gnome
-import System.IO
+import XMonad.Config.Gnome (gnomeConfig)
 
-main = do
-    --xmproc <- spawnPipe "/usr/bin/xmobar /home/chris/.xmobarrc"
-    xmonad $ defaultConfig
-        { terminal = "urxvt +sb -tr -tint Grey25 -fg Grey75 \
-                    \-fn \"xft:Inconsolata,xft:Terminus\""
-        , borderWidth = 1
+main = xmonad $ gnomeConfig
+        { terminal = "urxvt"
         , normalBorderColor   = "#111111"
         , focusedBorderColor  = "#333333"
-        , manageHook = manageDocks <+> manageHook defaultConfig
-        , layoutHook = avoidStruts  $  smartBorders  $
-                        layoutHook defaultConfig
-        {-, logHook = dynamicLogWithPP xmobarPP
-                    { ppOutput = hPutStrLn xmproc
-                    , ppTitle = xmobarColor "white" "" . shorten 50
-                    }-}
-        , startupHook = setWMName "LG3D"
+        , manageHook = composeAll
+            [ manageHook gnomeConfig
+            , fullscreenManageHook
+            ]
+        , handleEventHook = fullscreenEventHook
+        , layoutHook = smartBorders . fullscreenFull $ layoutHook gnomeConfig
         } `additionalKeys`
-        [ ((mod4Mask, xK_l), spawn "slock")
-        , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
-        , ((0, xK_Print), spawn "scrot")
-        , ((mod4Mask, xK_space), spawn "chromium-browser")
+        [ ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
+        , ((mod4Mask, xK_space), spawn "firefox")
         ]
+--        , ((mod4Mask, xK_l), spawn "slock")
+--        , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
+--        , ((0, xK_Print), spawn "scrot")
+--        , ((mod4Mask, xK_space), spawn "chromium-browser")
