@@ -17,8 +17,9 @@ alias dusch='du -sch'
 alias dfh='df -h'
 alias mkdirp='mkdir -p'
 
-# Move ^V clipboard to middle-click clipboard
+# Move ^V clipboard to middle-click clipboard and vice versa
 alias ptm='xclip -selection c -o | xclip'
+alias mtp='xclip -o | xclip -selection c'
 
 # modify default behaviors
 alias ls='ls --group-directories-first'
@@ -60,9 +61,6 @@ alias iptables='sudo iptables'
 alias iptraf='sudo iptraf'
 alias ntpupdate='sudo /etc/network/if-up.d/ntpdate restart'
 
-# Stupid name fix
-alias office='ooffice'
-
 # Amarok aliases; primarily useful if you're not in the same X session
 # 
 # Also handy:
@@ -73,7 +71,3 @@ alias next='dcop --user chris amarok player next'
 alias prev='dcop --user chris amarok player prev'
 
 alias psed='perl -p'
-
-alias android-connect="mtpfs -o allow_other /media/nexus"
-alias android-disconnect="fusermount -u /media/nexus"
-
