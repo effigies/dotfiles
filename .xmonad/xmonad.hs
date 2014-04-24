@@ -4,6 +4,7 @@ import XMonad.Layout.Fullscreen (fullscreenManageHook, fullscreenEventHook, full
 import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Layout.NoBorders (smartBorders)
 import XMonad.Config.Gnome (gnomeConfig)
+import XMonad.Hooks.SetWMName
 
 main = xmonad $ gnomeConfig
         { terminal = "urxvt"
@@ -15,6 +16,9 @@ main = xmonad $ gnomeConfig
             ]
         , handleEventHook = fullscreenEventHook
         , layoutHook = smartBorders . fullscreenFull $ layoutHook gnomeConfig
+        , startupHook = composeAll [ startupHook gnomeConfig
+                                   , setWMName "LG3D" -- Necessary for MATLAB
+                                   ]
         } `additionalKeys`
         [ ((mod1Mask .|. shiftMask, xK_q), spawn "gnome-session-quit")
         , ((mod4Mask, xK_space), spawn "firefox")
