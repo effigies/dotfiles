@@ -1,0 +1,7 @@
+(if
+(and
+(is (application_name) "Firefox")
+(is (window_role) "browser")
+)
+(undecorate)
+)
