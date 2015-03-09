@@ -5,8 +5,6 @@
 # Generally useful shorthand
 alias bc='bc -q'
 alias cpr='cp -R'
-alias greater='ls | more'
-alias fewer='ls | less'
 alias trees='tree | less'
 alias rmr='rm -r'
 alias rmrf='rm -rf'
@@ -22,17 +20,11 @@ alias ptm='xclip -selection c -o | xclip'
 alias mtp='xclip -o | xclip -selection c'
 
 # modify default behaviors
-alias ls='ls --group-directories-first'
+alias ls='ls --group-directories-first --color=auto'
 
 # ls shorthand
-alias l='ls -AFl' # Show me all!
-
-alias lsa='ls -A'
-alias lsc='ls --color=auto'
+alias l='ls -AFl'
 alias lsd='ls -d'
-alias lsf='ls -F'
-alias lsl='ls -l'
-alias lss='ls -s'
 
 # git shorthand
 alias git-fix='git status | grep deleted | sed -e "s/^#\tdeleted: *//" | xargs -d "\n" git rm;'
@@ -43,9 +35,7 @@ alias vi='vim'
 alias top='htop'
 
 # Personal preferences
-alias playiso='mplayer dvd:// -dvd-device'
 alias journal='vim ~/journal/`date +%Y.%m.%d`'
-alias lock='xtrlock &;disown; exit'
 
 # Apt aliases
 alias sagi='sudo apt-get install'
@@ -54,20 +44,7 @@ alias sagr='sudo apt-get remove'
 alias acs='apt-cache search'
 
 # Auto-sudo
-alias synaptic='sudo synaptic'
-alias gem='sudo gem'
-alias cpan='sudo cpan'
 alias iptables='sudo iptables'
 alias iptraf='sudo iptraf'
-alias ntpupdate='sudo /etc/network/if-up.d/ntpdate restart'
-
-# Amarok aliases; primarily useful if you're not in the same X session
-# 
-# Also handy:
-# sleep 60m; pause
-alias pause='amarok -t'
-alias play='dcop --user chris amarok player play'
-alias next='dcop --user chris amarok player next'
-alias prev='dcop --user chris amarok player prev'
 
 alias psed='perl -p'
