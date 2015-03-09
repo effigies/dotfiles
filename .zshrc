@@ -29,8 +29,9 @@ setopt PUSHD_SILENT		# Don't display directory stack
 
 #ulimit -u 1024
 
-export PATH="/usr/local/freesurfer/bin:/usr/lib/fsl/5.0:$HOME/.bin:$HOME/.cabal/bin:$PATH"
-export PYTHONPATH=/data/obart/django:/home/effigies/Projects/qnl/mvpa
+export PATH="$HOME/.bin:$HOME/.cabal/bin::$PATH"
+#export PATH="/data/chris/Sandbox/android-sdk-linux/tools:/data/chris/Sandbox/android-sdk-linux/platform-tools:$PATH"
+#export PATH="/usr/local/freesurfer/bin:/usr/lib/fsl/5.0:$PATH"
 
 # Import aliases
 . ~/.alias
