@@ -1,5 +1,5 @@
 [user]
-	name = Christopher J. Johnson
+	name = Christopher J. Markiewicz
 	email = effigies@gmail.com
 [push]
-	default = matching
+	default = simple
