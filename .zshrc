@@ -15,6 +15,11 @@ SET_TITLE=`echo -n "%{\\033]0;%n@%m:%~\\007%}"`
 # Prompt: user@host.tty:~/current/path%
 prompt="$SET_TITLE$PR_GREEN%n@%m$PR_NC.$PR_BLUE%y$PR_NC:$PR_WHITE%~$PR_NC%# "
 
+# Update title when running a command
+function preexec {
+    printf "\033]0;%s@%s:%s : %s\a" `whoami` `hostname` "${PWD/$HOME/~}" "$1"
+}
+
 #
 # History options
 #
