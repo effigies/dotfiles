@@ -1,15 +1,19 @@
+# Set color shorthand
+autoload colors zsh/terminfo
+if [[ "$terminfo[colors]" -ge 8 ]]; then
+    colors
+fi
+for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
+    eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
+    eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
+    (( count = $count + 1 ))
+done
+PR_NC="%{$terminfo[sgr0]%}"
+
+# Sneak title-control into each prompt, setting a basic user@host:path title
+SET_TITLE=`echo -n "%{\\033]0;%n@%m:%~\\007%}"`
 # Prompt: user@host.tty:~/current/path%
-    autoload colors zsh/terminfo
-    if [[ "$terminfo[colors]" -ge 8 ]]; then
-   colors
-    fi
-    for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-   eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
-   eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
-   (( count = $count + 1 ))
-    done
-    PR_NC="%{$terminfo[sgr0]%}"
-prompt="$PR_GREEN%n@%m$PR_NC.$PR_BLUE%y$PR_NC:$PR_WHITE%~$PR_NC%# "
+prompt="$SET_TITLE$PR_GREEN%n@%m$PR_NC.$PR_BLUE%y$PR_NC:$PR_WHITE%~$PR_NC%# "
 
 #
 # History options
