@@ -3,3 +3,6 @@
 	email = effigies@gmail.com
 [push]
 	default = simple
+
+[transfer]
+    fsckobjects = true
