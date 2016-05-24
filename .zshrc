@@ -6,14 +6,16 @@ fi
 for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
     eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
     eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
-    (( count = $count + 1 ))
 done
 PR_NC="%{$terminfo[sgr0]%}"
 
 # Sneak title-control into each prompt, setting a basic user@host:path title
 SET_TITLE=`echo -n "%{\\033]0;%n@%m:%~\\007%}"`
 # Prompt: user@host.tty:~/current/path%
-prompt="$SET_TITLE$PR_GREEN%n@%m$PR_NC.$PR_BLUE%y$PR_NC:$PR_WHITE%~$PR_NC%# "
+USER="$PR_GREEN%n@%m$PR_NC"
+PTY="$PR_BLUE%y$PR_NC"
+STATUS="%(?.$PR_LIGHT_GREEN.$PR_LIGHT_RED)[%?]$PR_NC"
+prompt="$SET_TITLE$USER.$PTY$STATUS:$PR_WHITE%~$PR_NC%# "
 
 # Update title when running a command
 function preexec {
