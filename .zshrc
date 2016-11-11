@@ -12,14 +12,14 @@ PR_NC="%{$terminfo[sgr0]%}"
 # Sneak title-control into each prompt, setting a basic user@host:path title
 SET_TITLE=`echo -n "%{\\033]0;%n@%m:%~\\007%}"`
 # Prompt: user@host.tty:~/current/path%
-USER="$PR_GREEN%n@%m$PR_NC"
-PTY="$PR_BLUE%y$PR_NC"
-STATUS="%(?.$PR_LIGHT_GREEN.$PR_LIGHT_RED)[%?]$PR_NC"
-prompt="$SET_TITLE$USER.$PTY$STATUS:$PR_WHITE%~$PR_NC%# "
+_USER="$PR_GREEN%n@%m$PR_NC"
+_PTY="$PR_BLUE%y$PR_NC"
+_STATUS="%(?.$PR_LIGHT_GREEN.$PR_LIGHT_RED)[%?]$PR_NC"
+prompt="$SET_TITLE$_USER.$_PTY$_STATUS:$PR_WHITE%~$PR_NC%# "
 
 # Update title when running a command
 function preexec {
-    printf "\033]0;%s@%s:%s : %s\a" `whoami` `hostname` "${PWD/$HOME/~}" "$1"
+    echo -n "\033]0;$USER@$(hostname):${PWD/$HOME/~} : $1\a"
 }
 
 #
