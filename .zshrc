@@ -65,3 +65,5 @@ source ${ZDOTDIR:-$HOME}/.zkbd/$TERM-$VENDOR-$OSTYPE
 TRAPUSR1() {
 	fc -IW ~/.zsh_histories/`date +%Y.%m.%d.%H.%M.%s`
 }
+
+export MAKEFLAGS="-j -l $(grep -c ^processor /proc/cpuinfo)"
