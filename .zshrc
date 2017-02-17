@@ -44,6 +44,7 @@ export PATH="$HOME/.bin:$HOME/.cabal/bin:$PATH"
 
 # Import aliases
 . ~/.alias
+. ~/.shell_functions
 
 # Standard keys
 autoload zkbd

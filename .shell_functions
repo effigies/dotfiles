@@ -1,0 +1,14 @@
+# Define shell functions
+# These should work equally well in bash and zsh - I can't speak for others
+#
+waitany() {
+    PROCID=$1
+    FLAG=1
+    while [[ ( -n "$PROCID" ) && ( -d /proc/$PROCID ) && \
+             ( -z `grep zombie /proc/$PROCID/status` ) ]]; do
+        FLAG=0
+        sleep 0.5
+    done
+    return $FLAG
+}
+export waitany

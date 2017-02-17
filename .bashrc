@@ -37,3 +37,4 @@ function prompt_cmd
 export PROMPT_COMMAND=prompt_cmd
 
 . ~/.alias
+. ~/.shell_functions
