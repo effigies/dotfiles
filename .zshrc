@@ -68,3 +68,6 @@ TRAPUSR1() {
 }
 
 export MAKEFLAGS="-j -l $(grep -c ^processor /proc/cpuinfo)"
+
+# added by Anaconda3 4.2.0 installer
+export PATH="$HOME/.anaconda3/bin:$PATH"
