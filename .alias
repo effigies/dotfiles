@@ -39,7 +39,7 @@ alias journal='vim ~/journal/`date +%Y.%m.%d`'
 
 # Apt aliases
 alias sagi='sudo apt-get install'
-alias sagu='sudo apt-get update;sudo apt-get upgrade'
+alias sagu='sudo bash -c "apt-get update && apt-get upgrade && apt-get autoremove"'
 alias sagr='sudo apt-get remove'
 alias acs='apt-cache search'
 
