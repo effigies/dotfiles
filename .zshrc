@@ -7,7 +7,7 @@ for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE GREY; do
     eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
     eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
 done
-PR_BOLD="%{$terminfo[bold]"
+PR_BOLD="%{$terminfo[bold]%}"
 PR_NC="%{$terminfo[sgr0]%}"
 
 # Sneak title-control into each prompt, setting a basic user@host:path title
