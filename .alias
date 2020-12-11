@@ -35,13 +35,13 @@ alias vi='vim'
 alias top='htop'
 
 # Personal preferences
-alias journal='vim ~/journal/`date +%Y.%m.%d`'
+alias journal='vim ~/journal/$(date +%Y.%m.%d)'
 
 # Apt aliases
-alias sagi='sudo apt-get install'
-alias sagu='sudo bash -c "apt-get update && apt-get upgrade && apt-get autoremove"'
-alias sagr='sudo apt-get remove'
-alias acs='apt-cache search'
+alias sagi='sudo apt install'
+alias sagu='sudo bash -c "apt update && apt upgrade && apt autoremove"'
+alias sagr='sudo apt remove'
+alias acs='apt search'
 
 # Auto-sudo
 alias iptables='sudo iptables'
