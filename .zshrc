@@ -61,7 +61,7 @@ ZSH_THEME="robbyrussell"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/dotfiles/zsh_custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -98,42 +98,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#
-# History options
-#
-export HISTFILE=~/.zsh_hist	# History file
-export SAVEHIST=100000		# Lines to save
-export HISTSIZE=100000		# Again
-setopt HIST_IGNORE_ALL_DUPS
-
-#
-# Changing directory options
-#
-setopt AUTO_CD			# Simply type the directory to cd
-setopt AUTO_PUSHD		# Push directories on stack by default
-setopt PUSHD_IGNORE_DUPS	# Don't push the same directory twice
-setopt PUSHD_SILENT		# Don't display directory stack
-
-# Import aliases
-. ~/.alias
-. ~/.shell_functions
-
-TRAPUSR1() {
-	fc -IW ~/.zsh_histories/`date +%Y.%m.%d.%H.%M.%s`
-}
-
-# Add user if not owner of $HOME (sudo -s)
-# Add hostname if over SSH
-# Add user@hostname if both
-_UPROMPT="%{$fg[green]%}%n%{$reset_color%}"
-_HPROMPT="%{$fg[blue]%}%m%{$reset_color%}"
-if [[ ( ~$USER != $HOME ) && ( -n "$SSH_CONNECTION" ) ]]; then
-  PROMPT="${_UPROMPT}@${_HPROMPT} ${PROMPT}"
-elif [[ ~$USER != $HOME ]]; then
-  PROMPT="${_UPROMPT} ${PROMPT}"
-elif [[ -n "$SSH_CONNECTION" ]]; then
-  PROMPT="${_HPROMPT} ${PROMPT}"
-fi
-
 export MAKEFLAGS="-j -l $(grep -c ^processor /proc/cpuinfo)"
-export FS_LICENSE="$HOME/Documents/freesurfer_license.txt"
