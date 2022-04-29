@@ -4,3 +4,5 @@
 .ssh/*_dsa*
 .ssh/*_ecdsa*
 .ssh/*.pub
+
+.*.swp
