@@ -7,13 +7,13 @@ for CONF in $CONFIGS; do if [ -r $CONF ]; then source $CONF; fi; done
 
 # No config, just a path
 PATHS=(
-  /usr/lib/ants
+  /opt/ants
 )
-for P in $PATHS; do if [ -d $P ]; then export PATH="$P:$PATH"; fi; done
+for P in $PATHS; do if [ -d $P ]; then export PATH="$P:$PATH"; export ANTSPATH="$PATH"; fi; done
 
 # FreeSurfer installations
 FSHOMES=(
-  /usr/local/freesurfer
+  /usr/local/freesurfer/7.2.0
   /Applications/freesurfer  # OSX
   $FREESURFER_HOME          # Could already be defined
 )
