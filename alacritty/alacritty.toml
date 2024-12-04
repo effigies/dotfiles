@@ -1,0 +1,7 @@
+[font]
+normal = { family = "RobotoMono Nerd Font Mono", style = "Regular" }
+
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+]
