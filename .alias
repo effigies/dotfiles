@@ -4,33 +4,13 @@
 
 # Generally useful shorthand
 alias bc='bc -q'
-alias cpr='cp -R'
-alias trees='tree | less'
-alias rmr='rm -r'
-alias rmrf='rm -rf'
-alias wcc='wc -c'
-alias wcl='wc -l'
 alias dush='du -sh'
 alias dusch='du -sch'
 alias dfh='df -h'
-alias mkdirp='mkdir -p'
 
 # Move ^V clipboard to middle-click clipboard and vice versa
 alias ptm='xclip -selection c -o | xclip'
 alias mtp='xclip -o | xclip -selection c'
-
-# modify default behaviors
-alias ls='ls --group-directories-first --color=auto'
-
-# ls shorthand
-alias l='ls -AFl'
-alias lsd='ls -d'
-
-# git shorthand
-alias git-fix='git status | grep deleted | sed -e "s/^#\tdeleted: *//" | xargs -d "\n" git rm;'
-
-alias v='vim'
-alias vi='vim'
 
 alias top='htop'
 
