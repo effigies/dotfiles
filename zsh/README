@@ -1,0 +1,8 @@
+This directory contains zsh configuration. To enable this:
+
+```
+ln -s $THISDIR/.zshenv $HOME
+```
+
+`.zshenv` sets the `ZDOTDIR` environment variable to this directory,
+causing zsh to load the remaining configuration.
