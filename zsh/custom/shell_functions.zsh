@@ -1,1 +1,1 @@
-../.shell_functions
+../../.shell_functions
