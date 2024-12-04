@@ -17,7 +17,7 @@ CASE_SENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 # History options
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git colored-man-pages)
+plugins=(git colored-man-pages aliases)
 source $ZSH/oh-my-zsh.sh
 
 # Lines configured by zsh-newuser-install
