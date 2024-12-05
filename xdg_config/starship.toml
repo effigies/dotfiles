@@ -196,17 +196,50 @@ style = "bg:color_orange fg:color_fg0"
 format = '[ $symbol]($style)'
 
 [[battery.display]]
-threshold = 5
+threshold = 9
 style = "fg:color_red bg:color_bg1"
 
 [[battery.display]]
-threshold = 15
+threshold = 19
+style = "fg:color_red bg:color_bg1"
+discharging_symbol = '󰁺 '
+
+[[battery.display]]
+threshold = 29
 style = "fg:color_orange bg:color_bg1"
+discharging_symbol = '󰁻 '
 
 [[battery.display]]
-threshold = 50
+threshold = 39
 style = "fg:color_yellow bg:color_bg1"
+discharging_symbol = '󰁼 '
 
 [[battery.display]]
-threshold = 75
+threshold = 49
+style = "fg:color_yellow bg:color_bg1"
+discharging_symbol = '󰁽 '
+
+[[battery.display]]
+threshold = 59
 style = "fg:color_aqua bg:color_bg1"
+discharging_symbol = '󰁾 '
+
+[[battery.display]]
+threshold = 69
+style = "fg:color_aqua bg:color_bg1"
+discharging_symbol = '󰁿 '
+
+[[battery.display]]
+threshold = 79
+style = "fg:color_aqua bg:color_bg1"
+discharging_symbol = '󰂀 '
+
+[[battery.display]]
+threshold = 89
+style = "fg:color_aqua bg:color_bg1"
+discharging_symbol = '󰂁 '
+
+[[battery.display]]
+threshold = 99
+style = "fg:color_aqua bg:color_bg1"
+discharging_symbol = '󰂂 '
