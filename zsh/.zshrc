@@ -18,7 +18,7 @@ CASE_SENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 # History options
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git colored-man-pages aliases rust)
+plugins=(git colored-man-pages aliases rust zoxide)
 source $ZSH/oh-my-zsh.sh
 
 # Lines configured by zsh-newuser-install
@@ -52,7 +52,8 @@ if type "starship" > /dev/null; then
   eval "$(starship init zsh)"
 fi
 
+[[ "$(command -v atuin)" ]] && eval "$(atuin init zsh)"
 # Bling enables atuin and zoxide, and aliases ls to eza and *grep to ug
 ### bling.sh source start
-test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/bluefin-cli/bling.sh
+# test -f /usr/share/ublue-os/bluefin-cli/bling.sh && source /usr/share/ublue-os/bluefin-cli/bling.sh
 ### bling.sh source end
