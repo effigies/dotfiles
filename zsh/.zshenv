@@ -18,3 +18,5 @@ fi
 if [[ -z "$XDG_RUNTIME_DIR" ]]; then
   export XDG_RUNTIME_DIR=/run/user/$UID
 fi
+
+[[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
