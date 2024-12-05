@@ -1,0 +1,13 @@
+[init]
+	defaultBranch = main
+[user]
+	email = markiewicz@stanford.edu
+	name = Christopher J. Markiewicz
+[credential]
+	credentialStore = secretservice
+	helper = /usr/bin/env git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
+

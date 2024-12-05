@@ -1,14 +1,8 @@
-[user]
-    name = Christopher J. Markiewicz
-    email = effigies@bu.edu
-    signingkey = Christopher J Markiewicz <effigies@bu.edu>
 [push]
     default = simple
 
 [transfer]
     fsckobjects = true
-[alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
 [diff]
 	tool = latexdiff
 [difftool "latexdiff"]
