@@ -10,6 +10,7 @@ export PATH
 export ZSH="$ZDOTDIR/ohmyzsh"
 ZSH_CUSTOM=$ZDOTDIR/custom
 ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
+ZSH_COMPDUMP="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/.zcompdump"
 
 unset ZSH_THEME  # Disable themes
 # Completion options
