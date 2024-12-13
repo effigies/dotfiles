@@ -11,12 +11,15 @@ PATHS=(
 )
 for P in $PATHS; do if [ -d $P ]; then export PATH="$P:$PATH"; fi; done
 
+unsetopt NOMATCH
 # FreeSurfer installations
 FSHOMES=(
+  /usr/local/freesurfer/?.?.?
   /usr/local/freesurfer
   /Applications/freesurfer  # OSX
   $FREESURFER_HOME          # Could already be defined
 )
+setopt NOMATCH
 
 for FSHOME in $FSHOMES; do if [ -d $FSHOME ]; then export FREESURFER_HOME=$FSHOME; break; fi; done
 
