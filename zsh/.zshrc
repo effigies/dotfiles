@@ -19,7 +19,7 @@ CASE_SENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 # History options
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(aliases direnv colored-man-pages git rust zoxide)
+plugins=(aliases direnv colored-man-pages git gh rust zoxide)
 source $ZSH/oh-my-zsh.sh
 
 # Lines configured by zsh-newuser-install
