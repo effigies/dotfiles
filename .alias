@@ -12,19 +12,25 @@ alias dfh='df -h'
 alias ptm='xclip -selection c -o | xclip'
 alias mtp='xclip -o | xclip -selection c'
 
-alias top='htop'
+test "$(command -v htop)" && alias top='htop'
 
 # Personal preferences
 alias journal='vim ~/journal/$(date +%Y.%m.%d)'
 
 # Apt aliases
-alias sagi='sudo apt install'
-alias sagu='sudo bash -c "apt update && apt upgrade && apt autoremove"'
-alias sagr='sudo apt remove'
-alias acs='apt search'
+if [ "$( command -v apt )" ]; then
+    alias sagi='sudo apt install'
+    alias sagu='sudo bash -c "apt update && apt upgrade && apt autoremove"'
+    alias sagr='sudo apt remove'
+    alias acs='apt search'
+fi
 
 # Auto-sudo
 alias iptables='sudo iptables'
 alias iptraf='sudo iptraf'
 
 alias psed='perl -p'
+
+test "$(command -v git-annex)" && alias gad='git annex drop'
+
+test "$(command -v uv)" && alias pip='uv pip'
