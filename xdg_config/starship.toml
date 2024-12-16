@@ -5,8 +5,7 @@ add_newline = false
 format = """
 [](color_orange)\
 $os\
-${custom.deleteos}\
-${custom.toolbx}\
+${custom}\
 $username\
 $hostname\
 [](bg:color_yellow fg:color_orange)\
@@ -191,6 +190,24 @@ command = """ grep -Po 'name="\\K[^"]+' /run/.containerenv """
 when = "test -f /run/.containerenv"
 symbol = ' '
 style = "bg:color_orange fg:color_fg0"
+
+[custom.bash]
+command = "echo "
+when = 'test "$STARSHIP_SHELL" = "bash"'
+style = "bg:color_orange fg:color_fg0"
+format = "[ $output ]($style)"
+
+[custom.fish]
+command = "echo 󰈺"
+when = 'test "$STARSHIP_SHELL" = "fish"'
+style = "bg:color_orange fg:color_fg0"
+format = "[ $output ]($style)"
+
+[custom.zsh]
+command = "echo 󰬇"
+when = 'test "$STARSHIP_SHELL" = "zsh"'
+style = "bg:color_orange fg:color_fg0"
+format = "[ $output ]($style)"
 
 [battery]
 format = '[ $symbol]($style)'
