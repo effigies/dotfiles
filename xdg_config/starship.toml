@@ -30,6 +30,7 @@ $conda\
 [](fg:color_bg3 bg:color_bg1)\
 $battery\
 $time\
+${custom.timezone}\
 $cmd_duration\
 [ ](fg:color_bg1)\
 $line_break$character"""
@@ -165,8 +166,14 @@ format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:color_bg1"
-format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+style = "fg:color_fg0 bg:color_bg1"
+format = '[  $time ]($style)'
+
+[custom.timezone]
+command = 'date +"%Z"'
+when = 'test -n "$SSH_CLIENT"'
+style = "fg:color_fg0 bg:color_bg1"
+format = '[$output]($style)'
 
 [cmd_duration]
 style = "fg:color_fg0 bg:color_bg1"
