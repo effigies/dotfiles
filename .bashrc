@@ -4,41 +4,36 @@
 #
 # Source global definitions
 
+DOTFILES=$( dirname $( realpath $BASH_SOURCE ) )
+
+# Import the common environment variables
+. $DOTFILES/env
+
+# Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
-if [ "$TERM" = "rxvt-unicode-256color" ]; then
-    TERM="rxvt-unicode"
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+export PATH
 
-RS="\[\033[0m\]"    # reset
-for cmap in BLK:0 RED:1 GRN:2 YEL:3 BLU:4 MAG:5 CYN:6 WHT:7; do
-    color="${cmap:0:3}"
-    cnum="${cmap:4}"
-    eval PR_$color='"\[\033[01;3${cnum}m\]"'
-    eval PR_L$color='"\[\033[3${cnum}m\]"'
-done
-PR_BOLD="\[\033[1m\]"
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
 
-SET_TITLE="\[\033]0;\u@\h:\w\a\]"
-USER="$PR_LRED\u@\h$RS"
-PTY="${PR_BLU}pts/\l$RS"
-WD="$PR_BOLD\w$RS"
-function prompt_cmd
-{
-    RET=$?
-    if [ $RET = 0 ]; then
-        STATUS="$PR_LGRN[$RET]$RS"
-    else
-        STATUS="$PR_LRED[$RET]$RS"
-    fi
-    export PS1="$SET_TITLE$USER.$PTY$STATUS:$WD% "
-}
-export PROMPT_COMMAND=prompt_cmd
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
 
-. ~/.alias
-. ~/.shell_functions
+eval "$(starship init bash)"
 
-# added by Anaconda3 4.2.0 installer
-export PATH="$HOME/.anaconda3/bin:$PATH"
+. $DOTFILES/.alias
+. $DOTFILES/.shell_functions
