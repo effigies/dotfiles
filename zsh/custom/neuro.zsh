@@ -31,7 +31,8 @@ fi
 # FreeSurfer licenses
 LICENSES=(
   $FREESURFER_HOME/license.txt		  # Most likely
-  $HOME/Documents/freesurfer_license.txt  # I've put it here
+  $HOME/Documents/work/licenses/freesurfer_license.txt
+  $HOME/Documents/freesurfer_license.txt
   $FS_LICENSE                             # Could already be defined
 )
 
