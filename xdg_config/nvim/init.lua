@@ -7,6 +7,7 @@ require("config.lazy")
 require('lspconfig').ruff.setup({
     init_options = {
         settings = {
+            configurationPreference = "filesystemFirst",
         }
     }
 })
