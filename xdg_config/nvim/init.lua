@@ -4,10 +4,10 @@ require("config.settings")
 -- lazy loads lua/plugins/*.lua
 require("config.lazy")
 
-require('lspconfig').ruff.setup({
-    init_options = {
-        settings = {
-            configurationPreference = "filesystemFirst",
-        }
-    }
+require("lspconfig").ruff.setup({
+  init_options = {
+    settings = {
+      configurationPreference = "filesystemFirst",
+    },
+  },
 })

@@ -11,10 +11,10 @@ vim.o.termguicolors = true -- Enable 24-bit RGB colors
 vim.o.formatoptions = tcqcro
 
 -- Syntax highlighting and filetype plugins
-vim.cmd('filetype plugin indent on')
-vim.cmd('syntax enable')
+vim.cmd("filetype plugin indent on")
+vim.cmd("syntax enable")
 
 -- Leader key
-vim.g.mapleader = ' ' -- Space as the leader key
-vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
+vim.g.mapleader = " " -- Space as the leader key
+vim.api.nvim_set_keymap("n", "<Leader>w", ":w<CR>", { noremap = true, silent = true })
 
