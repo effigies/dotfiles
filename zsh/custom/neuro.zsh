@@ -37,5 +37,3 @@ LICENSES=(
 )
 
 for LIC in $LICENSES; do if [ -r $LIC ]; then export FS_LICENSE=$LIC; break; fi; done
-
-

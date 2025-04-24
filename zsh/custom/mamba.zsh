@@ -4,6 +4,7 @@ fi
 
 export MAMBA_EXE=$( realpath $( whence -c mamba ) )
 export MAMBA_ROOT_PREFIX=$HOME/mamba
+export CONDA_ROOT_PREFIX=$HOME/mamba
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba shell init' !!
@@ -15,5 +16,3 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
-
-alias conda=mamba
