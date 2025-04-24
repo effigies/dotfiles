@@ -32,55 +32,55 @@ Control F10	:SendToWorkspace 10
 Control F11	:SendToWorkspace 11
 Control F12	:SendToWorkspace 12
 
-#Mod1 Q		:Exec 
-#Mod1 W		:Exec 
-#Mod1 E		:Exec 
+#Mod1 Q		:Exec
+#Mod1 W		:Exec
+#Mod1 E		:Exec
 Mod1 R		:Exec urxvt -fn "xft:Bitstream Vera Sans Mono:pixelsize=15" -fg "#ffffff" -bg "#404040" -tr +sb -ls -sl 32768
-#Mod1 T		:Exec 
-#Mod1 Y		:Exec 
-#Mod1 U		:Exec 
-#Mod1 I		:Exec 
-#Mod1 O		:Exec 
-#Mod1 P		:Exec 
+#Mod1 T		:Exec
+#Mod1 Y		:Exec
+#Mod1 U		:Exec
+#Mod1 I		:Exec
+#Mod1 O		:Exec
+#Mod1 P		:Exec
 
 Mod1 A		:Exec pidgin
 Mod1 S		:Exec amarok
-#Mod1 D		:Exec 
+#Mod1 D		:Exec
 Mod1 F		:Exec firefox
-#Mod1 G		:Exec 
-#Mod1 H		:Exec 
-#Mod1 J		:Exec 
-#Mod1 K		:Exec 
-#Mod1 L		:Exec 
-#Mod1 semicolon	:Exec 
+#Mod1 G		:Exec
+#Mod1 H		:Exec
+#Mod1 J		:Exec
+#Mod1 K		:Exec
+#Mod1 L		:Exec
+#Mod1 semicolon	:Exec
 
-#Mod1 Z		:Exec 
-#Mod1 X		:Exec 
-#Mod1 C		:Exec 
-#Mod1 V		:Exec 
-#Mod1 B		:Exec 
-#Mod1 N		:Exec 
-#Mod1 M		:Exec 
+#Mod1 Z		:Exec
+#Mod1 X		:Exec
+#Mod1 C		:Exec
+#Mod1 V		:Exec
+#Mod1 B		:Exec
+#Mod1 N		:Exec
+#Mod1 M		:Exec
 
-#Mod4 Q		:Exec 
-#Mod4 W		:Exec 
-#Mod4 E		:Exec 
+#Mod4 Q		:Exec
+#Mod4 W		:Exec
+#Mod4 E		:Exec
 Mod4 R		:reconfigure
-#Mod4 T		:Exec 
-#Mod4 Y		:Exec 
-#Mod4 U		:Exec 
-#Mod4 I		:Exec 
+#Mod4 T		:Exec
+#Mod4 Y		:Exec
+#Mod4 U		:Exec
+#Mod4 I		:Exec
 #Mod4 O		:Exec ### Amarok Show OSD ###
 #Mod4 P		:Exec ### Amarok Toggle Playlist Window ###
 
 #Mod4 A		:Exec ### Amarok Add Media ###
-#Mod4 S		:Exec 
-#Mod4 D		:Exec 
-#Mod4 F		:Exec 
-#Mod4 G		:Exec 
-#Mod4 H		:Exec 
-#Mod4 J		:Exec 
-#Mod4 K		:Exec 
+#Mod4 S		:Exec
+#Mod4 D		:Exec
+#Mod4 F		:Exec
+#Mod4 G		:Exec
+#Mod4 H		:Exec
+#Mod4 J		:Exec
+#Mod4 K		:Exec
 Mod4 L		:Exec xscreensaver-command -lock || xscreensaver & sleep 1 && xscreensaver-command -lock
 
 #Mod4 Z		:Exec ### Amarok Previous Track ###
@@ -88,37 +88,37 @@ Mod4 L		:Exec xscreensaver-command -lock || xscreensaver & sleep 1 && xscreensav
 #Mod4 C		:Exec ### Amarok Play/Pause ###
 #Mod4 V		:Exec ### Amarok Stop ###
 #Mod4 B		:Exec ### Amarok Next Track ###
-#Mod4 N		:Exec 
-#Mod4 M		:Exec 
+#Mod4 N		:Exec
+#Mod4 M		:Exec
 
-#Control Q	:Exec 
-#Control W	:Exec 
-#Control E	:Exec 
-#Control R	:Exec 
-#Control T	:Exec 
-#Control Y	:Exec 
-#Control U	:Exec 
-#Control I	:Exec 
-#Control O	:Exec 
-#Control P	:Exec 
+#Control Q	:Exec
+#Control W	:Exec
+#Control E	:Exec
+#Control R	:Exec
+#Control T	:Exec
+#Control Y	:Exec
+#Control U	:Exec
+#Control I	:Exec
+#Control O	:Exec
+#Control P	:Exec
 
-#Control A	:Exec 
-#Control S	:Exec 
-#Control D	:Exec 
-#Control F	:Exec 
-#Control G	:Exec 
-#Control H	:Exec 
-#Control J	:Exec 
-#Control K	:Exec 
-#Control L	:Exec 
+#Control A	:Exec
+#Control S	:Exec
+#Control D	:Exec
+#Control F	:Exec
+#Control G	:Exec
+#Control H	:Exec
+#Control J	:Exec
+#Control K	:Exec
+#Control L	:Exec
 
-#Control Z	:Exec 
-#Control X	:Exec 
-#Control C	:Exec 
-#Control V	:Exec 
-#Control B	:Exec 
-#Control N	:Exec 
-#Control M	:Exec 
+#Control Z	:Exec
+#Control X	:Exec
+#Control C	:Exec
+#Control V	:Exec
+#Control B	:Exec
+#Control N	:Exec
+#Control M	:Exec
 
 # Modify size/decoration of window
 Mod4 Up		:ToggleDecor
