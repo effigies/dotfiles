@@ -5,9 +5,13 @@
 	name = Christopher J. Markiewicz
 [credential]
 	credentialStore = secretservice
-	helper = /usr/bin/env git-credential-manager
+	helper = /usr/bin/env -S git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
 
+[credential "https://openneuro.org"]
+    useHttpPath = true
+    provider = generic
+    helper = /usr/bin/env -S deno -A jsr:@openneuro/cli git-credential
