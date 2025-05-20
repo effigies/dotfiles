@@ -15,3 +15,8 @@
     useHttpPath = true
     provider = generic
     helper = /usr/bin/env -S deno -A jsr:@openneuro/cli git-credential
+
+[remote "upstream"]
+	tagOpt = --tags
+[remote "origin"]
+	tagOpt = --tags
