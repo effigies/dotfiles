@@ -44,3 +44,18 @@ LICENSES=(
 )
 
 for LIC in $LICENSES; do if [ -r $LIC ]; then export FS_LICENSE=$LIC; break; fi; done
+
+AFNI_PATHS=(
+  $HOME/abin
+)
+
+for AFNI_PATH in $AFNI_PATHS; do
+  if [ -d $AFNI_PATH ]; then
+    $AFNI_PATH/afni --version &>/dev/null || continue
+    export PATH="$AFNI_PATH:$PATH"
+    break;
+  fi;
+done
+
+[[ -f $HOME/.afni/help/all_progs.COMP.zsh ]] && \
+  source $HOME/.afni/help/all_progs.COMP.zsh
